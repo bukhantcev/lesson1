@@ -31,7 +31,8 @@ public class Main {
         BottleOfWater bottleOfWater4 = new BottleOfWater("Вода3", 130, 3);
         BottleOfWater bottleOfWater5 = new BottleOfWater("Вода4", 100, 1);
 
-        Product bottleOfMilk1 = new BottleOfMilk("Молоко", 100, 2, 10);
+        Product bottleOfMilk1 = new BottleOfMilk("Молоко", 100, 2);
+        BottleOfMilk bottleOfMilk2 = new BottleOfMilk("Molochishe", 4, 3);
 
         Canabis canabis1 = new Canabis("Green", "Sativa", 1.5);
         Canabis canabis2 = new Canabis("Green", "Gydropone", 1.5);
@@ -44,6 +45,7 @@ public class Main {
         products.add(bottleOfWater5);
         products.add(canabis1);
         products.add(canabis2);
+        products.add(bottleOfMilk2);
 
 
         BottleOfWaterVendingMachine machine = new BottleOfWaterVendingMachine(products);
@@ -56,6 +58,16 @@ public class Main {
         }
         else {
             System.out.println("Что-то вы не то пытаетесь купить...");
+        }
+        BottleOfMilk milkRes =  machine.getBottleOfMilk("Molochishe", 4, 3);
+        milkRes.setPrice(67);
+        if (milkRes != null){
+            System.out.println("Вы купили: ");
+            System.out.println(milkRes.displayInfo());
+
+        }
+        else {
+            System.out.println("Что-");
         }
 
     }

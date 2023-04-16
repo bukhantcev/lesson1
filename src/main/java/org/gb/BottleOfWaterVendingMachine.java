@@ -34,9 +34,25 @@ public class BottleOfWaterVendingMachine {
             }
         }
         return null;
+
+
     }
 
-    //TODO: Разработать метод получения бутылки с молоком самостоятельно
+    public BottleOfMilk getBottleOfMilk(String name, int volume, int fat){
+
+        for (Product product : products){
+            if (product instanceof BottleOfMilk){
+                if (product.getName() == name && ((BottleOfMilk)product).getVolume() == volume &&
+                        ((BottleOfMilk)product).getFat() == fat){
+                    return (BottleOfMilk) product;
+                }
+            }
+        }
+        return null;
+
+
+    }
+
 
 
 

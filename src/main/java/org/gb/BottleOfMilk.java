@@ -3,14 +3,20 @@ package org.gb;
 public class BottleOfMilk extends Product {
 
     private int volume;
+
+
     private int fat;
+
+    public int getFat() {
+        return fat;
+    }
 
     public int getVolume() {
         return volume;
     }
 
-    public BottleOfMilk(String name, double price, int volume, int fat){
-        super(name, price);
+    public BottleOfMilk(String name,  int volume, int fat){
+        super(name);
         this.volume = volume;
         this.fat = fat;
     }
@@ -18,7 +24,7 @@ public class BottleOfMilk extends Product {
     @Override
     String displayInfo() {
         //return super.displayInfo();
-        return String.format("%s - %s - %f - объем: %d", brand, name, price, volume);
+        return String.format("брэнд: %s - название: %s - цена: %f - объем: %d", brand, name, price, volume);
 
     }
 }
